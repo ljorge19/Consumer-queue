@@ -19,12 +19,12 @@ public class ReadQueue {
 	        
 	        
 	        
-	       
+	    
 	            ctx.addRoutes(new RouteBuilder() {
 					
 					@Override
 					public void configure() {
-						from("jms:ljorge") 
+						from("activemq:ljorge")
 						.to("stream:out")
 						.to("file:C:/outputFolder");
 					}
